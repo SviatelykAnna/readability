@@ -709,9 +709,6 @@ Readability.prototype = {
     this._cleanConditionally(articleContent, "ul");
     this._cleanConditionally(articleContent, "div");
 
-    // replace H1 with H2 as H1 should be only title that is displayed separately
-    this._replaceNodeTags(this._getAllNodesWithTag(articleContent, ["h1"]), "h2");
-
     // Remove extra paragraphs
     this._removeNodes(this._getAllNodesWithTag(articleContent, ["p"]), function (paragraph) {
       var imgCount = paragraph.getElementsByTagName("img").length;
